@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vendor/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+       
+      <div class="row">
+        <div class="col-md-12 bg-color mb-2">
+          <h3 class="text-center mt-2 text-primary">DANH SÁCH SẢN PHẨM</h3>
+          <div class="row">
+            <div class="col-md-6 text-right">
+                <label for="" class="">Sắp sếp</label>
+                <select name="" id="sort" onchange="sortProduct()">
+                    <option value="">---Sắp sếp---</option>
+                    <option value="increment">A-Z</option>
+                    <option value="decrement">Z-A</option>
+                </select>
+            </div>
+            <div class="col-md-6 text-left">
+                <label for="" class="" >Lọc</label>
+                <select name="" id="idFilter" onchange="filterProduct()">
+                    <option value="">--Lọc--</option>
+                    <option value="iphone">Apple</option>
+                    <option value="Samsung">SamSung</option>
+                </select>
+            </div>
+        </div>
+          <div id="tbody" class="row">
+            
+            <!-- end product1 -->
+          </div>
+        </div>
+        
+        </div>
+        <div class="row">
+           
+                    <div class="col-12 mt-5">
+                     <h3>GIỎ HÀNG</h3>
+                    </div>
+                    <div class="col-12">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Hình Ảnh</th>
+                            <th>Sản Phẩm</th>
+                            <th>Giá</th>
+                            <th>Số Lượng</th>
+                            <th>Tổng Cộng</th>
+                            <th></th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbodyCart">
+                         
+                        </tbody>
+                        
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td style="font-size: 30px;" class="font-weight-bold">
+                            Tổng Tiền
+                          </td>
+                          <td style="font-size: 30px;" class="font-weight-bold"><span id="allSum"></span></td>
+                          <td>
+                               <button id="thanhtoan" style="font-size: 20px;" class="btn btn-danger btn-sm" onclick="thanhToan()">
+                                  Thanh Toán
+                                </button>
+                          </td>
+                        </tr> 
+                      </table>
+               
+      </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/productList.js"></script>
+    <script src="js/cartItems.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
